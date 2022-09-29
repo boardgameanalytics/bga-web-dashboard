@@ -3,23 +3,30 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+require('dotenv').config()
+
 module.exports = {
 
   development: {
     client: 'postgresql',
     connection: {
-      filename: './dev.sqlite3'
+      host: process.env.DB_HOST,
+      database: process.env.DB_DB,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      sslmode: 'require'
     }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      host: "boardgameanalytics-db-cluster-do-user-12532999-0.b.db.ondigitalocean.com",
-      database: 'boardgames',
-      user:     'dashboard',
+      host: "",
+      database: '',
+      user:     '',
       password: '',
-      sslmode: 'require'
+      sslmode: ''
     },
     pool: {
       min: 2,
