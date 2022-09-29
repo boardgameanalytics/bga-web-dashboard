@@ -18,7 +18,7 @@ module.exports = {
       host: "boardgameanalytics-db-cluster-do-user-12532999-0.b.db.ondigitalocean.com",
       database: 'boardgames',
       user:     'dashboard',
-      password: 'AVNS_le7z2R0XtJ7Qe8TLKFN',
+      password: '',
       sslmode: 'require'
     },
     pool: {
